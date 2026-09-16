@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #05080f;
+    color: #e2e8f0;
+    overflow-x: hidden;
+    /* Subtle dot grid across the whole page */
+    background-image: radial-gradient(rgba(79, 142, 247, 0.055) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  /* Smoother selection */
+  ::selection {
+    background: rgba(79, 142, 247, 0.25);
+    color: #bfdbfe;
+  }
+}
+
+/* ─── Scrollbar ──────────────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #05080f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e2d47;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d4266;
+}
+
+/* ─── Hero glow ───────────────────────────────── */
+#hero {
+  position: relative;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 75% 50% at 50% -5%, rgba(79, 142, 247, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Glass card ─────────────────────────────── */
+.glass-card {
+  background: linear-gradient(135deg, rgba(13, 21, 40, 0.85) 0%, rgba(8, 14, 28, 0.9) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-card:hover {
+  border-color: rgba(79, 142, 247, 0.2);
+}
+
+/* ─── Top gradient line on cards ────────────── */
+.card-top-glow {
+  position: relative;
+}
+
+.card-top-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(79, 142, 247, 0.5) 50%, transparent 100%);
+  border-radius: 9999px 9999px 0 0;
+}
+
+/* ─── Gradient text utilities ─────────────────── */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #c8d5e8 60%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.accent-gradient {
+  background: linear-gradient(135deg, #60a5fa 0%, #4f8ef7 50%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Timeline gradient line ─────────────────── */
+.timeline-line {
+  background: linear-gradient(to bottom, transparent 0%, #4f8ef7 20%, #4f8ef7 80%, transparent 100%);
+}
+
+/* ─── Shimmer / skeleton placeholder ─────────── */
+.shimmer-bg {
+  background: linear-gradient(90deg, #0d1528 25%, #152040 50%, #0d1528 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s linear infinite;
+}
+
+/* ─── Section enter animation ──────────────────── */
+.section-card {
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ─── Focus ring ─────────────────────────────── */
+:focus-visible {
+  outline: 2px solid rgba(79, 142, 247, 0.7);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
