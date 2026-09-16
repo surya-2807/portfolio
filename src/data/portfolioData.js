@@ -6,7 +6,7 @@ export const personalInfo = {
   email: "prakeshs870@gmail.com",
   phone: "+91 9600834966",
   github: "https://github.com/surya-2807",
-  linkedin: "https://www.linkedin.com/in/surya-prakash-s-9a454b24b",
+  linkedin: "https://www.linkedin.com/in/surya-prakash-s-p",
   resumeUrl: "./assets/SURYA_PRAKASH.pdf",
   profileImage: "./assets/surya_profile.jpg",
   headline: "Cloud. Software. AI-assisted development.",
