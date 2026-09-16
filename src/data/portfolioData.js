@@ -1,3 +1,5 @@
+const BASE = import.meta.env.BASE_URL;
+
 export const personalInfo = {
   name: "Surya Prakash S",
   role: "Associate System Engineer Intern",
@@ -7,8 +9,8 @@ export const personalInfo = {
   phone: "+91 9600834966",
   github: "https://github.com/surya-2807",
   linkedin: "https://www.linkedin.com/in/surya-prakash-s-p",
-  resumeUrl: "./assets/SURYA_PRAKASH.pdf",
-  profileImage: "./assets/surya_profile.jpg",
+  resumeUrl: `${BASE}assets/SURYA_PRAKASH.pdf`,
+  profileImage: `${BASE}assets/surya_profile.jpg`,
   headline: "Cloud. Software. AI-assisted development.",
   shortBio: "Associate System Engineer Intern at Devopstrio. I work on cloud governance research, web features, UAT testing, and AI-assisted engineering workflows with a focus on writing clean, dependable systems."
 };
@@ -153,7 +155,7 @@ export const earlierEngineeringProjects = [
     type: "Hardware & IoT Prototype",
     period: "2024 – 2025",
     summary: "Engineered an automated collision mitigation prototype integrating ultrasonic distance sensors with microcontroller logic and a rear warning LCD display.",
-    image: "./assets/braking_system_project.jpg",
+    image: `${BASE}assets/braking_system_project.jpg`,
     highlights: [
       "Programmed microcontroller distance threshold logic for emergency braking trigger.",
       "Integrated rear LCD visual warning to alert trailing vehicles in real time.",
@@ -166,7 +168,7 @@ export const earlierEngineeringProjects = [
     type: "Experimental Research",
     period: "2024 – 2025",
     summary: "Conducted experimental research evaluating diesel engine performance and emission characteristics using waste plastic-derived pyrolytic oil blends with additives.",
-    image: "./assets/pyrolytic_oil_project.jpg",
+    image: `${BASE}assets/pyrolytic_oil_project.jpg`,
     highlights: [
       "Prepared fuel blends (10%, 20%, 30%) with diethyl ether additive enhancement.",
       "Analyzed combustion efficiency, brake thermal efficiency, and emission parameters.",
@@ -179,7 +181,7 @@ export const earlierEngineeringProjects = [
     type: "Competition Entry · 3rd Place",
     period: "2023",
     summary: "Designed and fabricated an ergonomic performance bicycle focusing on frame structural integrity, weight distribution, and dynamic stability.",
-    image: "./assets/bicycle_dynamics_project.jpg",
+    image: `${BASE}assets/bicycle_dynamics_project.jpg`,
     highlights: [
       "Awarded 3rd Place for Best Dynamic Performance at SAEISS competition.",
       "Led structural frame fabrication and dynamic stress validation testing.",
@@ -268,7 +270,7 @@ export const careerTimeline = [
       "Cleaned and organized raw datasets into structured visual formats.",
       "Completed assigned milestones and earned program certificate of completion."
     ],
-    certificateUrl: "./assets/excelerate_certificate.pdf"
+    certificateUrl: `${BASE}assets/excelerate_certificate.pdf`
   }
 ];
 
@@ -359,11 +361,11 @@ export const educationInfo = {
   transitionStory: "Built strong analytical, systems thinking, and engineering problem-solving foundations through Automobile Engineering, before systematically transitioning into IT, Cloud Computing, and Software Development.",
   images: [
     {
-      src: "./assets/graduation_stage.jpg",
+      src: `${BASE}assets/graduation_stage.jpg`,
       caption: "Receiving Degree Certificate on 38th Graduation Day at Kongu Engineering College"
     },
     {
-      src: "./assets/graduation_outdoor.jpg",
+      src: `${BASE}assets/graduation_outdoor.jpg`,
       caption: "Graduation Day with Degree Folio at Kongu Engineering College Campus"
     }
   ]
