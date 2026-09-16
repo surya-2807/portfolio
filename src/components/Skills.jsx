@@ -2,12 +2,11 @@ import React from 'react';
 import { skillGroups } from '../data/portfolioData';
 
 const DOMAIN_COLORS = {
-  'Cloud Infrastructure':      { header: 'text-cyan-400',   bar: 'bg-cyan-500/10 border-cyan-500/25',   dot: 'bg-cyan-400' },
-  'Development':               { header: 'text-blue-400',   bar: 'bg-blue-500/10 border-blue-500/25',   dot: 'bg-blue-400' },
-  'Cloud / DevOps Tools':      { header: 'text-sky-400',    bar: 'bg-sky-500/10 border-sky-500/25',     dot: 'bg-sky-400' },
-  'Systems & Networking':      { header: 'text-teal-400',   bar: 'bg-teal-500/10 border-teal-500/25',   dot: 'bg-teal-400' },
-  'Quality & Testing':         { header: 'text-amber-400',  bar: 'bg-amber-500/10 border-amber-500/25', dot: 'bg-amber-400' },
-  'AI-Assisted Development':   { header: 'text-violet-400', bar: 'bg-violet-500/10 border-violet-500/25',dot: 'bg-violet-400' },
+  'Cloud Platforms':            { header: 'text-cyan-400',   bar: 'bg-cyan-500/10 border-cyan-500/25',   dot: 'bg-cyan-400' },
+  'Networking':                 { header: 'text-blue-400',   bar: 'bg-blue-500/10 border-blue-500/25',   dot: 'bg-blue-400' },
+  'Infrastructure & DevOps':    { header: 'text-sky-400',    bar: 'bg-sky-500/10 border-sky-500/25',     dot: 'bg-sky-400' },
+  'Systems & Troubleshooting':  { header: 'text-teal-400',   bar: 'bg-teal-500/10 border-teal-500/25',   dot: 'bg-teal-400' },
+  'Development & QA':           { header: 'text-amber-400',  bar: 'bg-amber-500/10 border-amber-500/25', dot: 'bg-amber-400' },
 };
 
 export default function Skills() {
@@ -21,17 +20,17 @@ export default function Skills() {
             06 / Technical Capabilities
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
-            Skills & Competency Domains
+            Skills & Technical Competencies
           </h2>
           <p className="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed font-light">
-            Organized by functional engineering domains with real-world application context from active project work and internship responsibilities.
+            Core technical domains organized by practical hands-on capability, AWS training, and active internship experience.
           </p>
         </div>
 
-        {/* Domain grid */}
+        {/* Domain grid - 5 categories */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {skillGroups.map((group, index) => {
-            const colors = DOMAIN_COLORS[group.category] || DOMAIN_COLORS['Development'];
+            const colors = DOMAIN_COLORS[group.category] || DOMAIN_COLORS['Cloud Platforms'];
             return (
               <div
                 key={index}
@@ -52,7 +51,7 @@ export default function Skills() {
                       <div className="text-sm font-semibold text-white tracking-tight">
                         {item.name}
                       </div>
-                      <div className="text-xs text-slate-400 leading-normal font-light">
+                      <div className="text-xs text-slate-300 leading-normal font-light">
                         {item.context}
                       </div>
                     </div>

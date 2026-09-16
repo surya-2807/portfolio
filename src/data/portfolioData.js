@@ -55,10 +55,10 @@ export const currentFocus = {
 export const featuredProjects = [
   {
     id: "aws-monitoring",
-    title: "AWS Cloud Monitoring & Alerting Setup",
-    subtitle: "Automated infrastructure health monitoring and incident notification",
-    category: "Cloud Infrastructure",
-    summary: "Configured automated metric alarms on EC2 cloud instances using Amazon CloudWatch and Amazon SNS to trigger instant email notifications upon threshold breaches.",
+    title: "Personal AWS Lab — Cloud Monitoring & Alerting",
+    subtitle: "Hands-on exploration of automated EC2 health monitoring and SNS incident notifications",
+    category: "AWS Cloud Lab",
+    summary: "Configured automated metric alarms on an EC2 Linux instance using Amazon CloudWatch and Amazon SNS to trigger instant email notifications upon threshold breaches.",
     architectureNodes: [
       {
         id: "ec2",
@@ -97,10 +97,10 @@ export const featuredProjects = [
   },
   {
     id: "static-hosting",
-    title: "Static Website Hosting Architecture",
-    subtitle: "Low-latency asset delivery using S3 and CloudFront CDN",
-    category: "Cloud & Web",
-    summary: "Deployed a resilient static website hosting architecture on AWS using Amazon S3 for origin storage and CloudFront CDN for global edge caching, SSL, and low latency.",
+    title: "Personal AWS Lab — Static Website Delivery",
+    subtitle: "Low-latency content delivery architecture using Amazon S3, CloudFront CDN, and Route 53",
+    category: "AWS Cloud Lab",
+    summary: "Configured a resilient static website delivery pipeline using Amazon S3 for origin storage, CloudFront CDN with Origin Access Control (OAC) for global edge caching, and Route 53 DNS.",
     architectureNodes: [
       {
         id: "user",
@@ -198,55 +198,45 @@ export const earlierEngineeringProjects = [
 
 export const aiWorkflow = {
   heading: "How I Build with AI",
-  philosophy: "I use AI tools throughout development to understand unfamiliar code, explore approaches, implement changes, debug issues, and speed up repetitive work. I review, test, and validate the output before using it.",
+  philosophy: "I use Antigravity, Claude, and AI tools to understand unfamiliar codebases, explore architectural options, and accelerate drafting. I manually review, test, and validate every output before using it.",
   steps: [
     {
       num: "01",
-      title: "Requirement",
-      summary: "Understand the actual problem, constraints, and success criteria."
+      title: "Understand",
+      summary: "Analyze the actual requirement, system constraints, and expected behavior."
     },
     {
       num: "02",
-      title: "AI Planning",
-      summary: "Explore implementation approaches, assess edge cases, and organize tasks."
+      title: "Build",
+      summary: "Use AI assistance to explore implementation approaches and accelerate code drafting."
     },
     {
       num: "03",
-      title: "Development",
-      summary: "Use AI assistance to accelerate component building and syntax implementation."
+      title: "Test",
+      summary: "Design test scenarios, validate functional edge cases, and verify regressions."
     },
     {
       num: "04",
-      title: "Debugging",
-      summary: "Investigate errors, analyze logs, and quickly identify root causes."
-    },
-    {
-      num: "05",
-      title: "Testing & UAT",
-      summary: "Generate test cases, validate user-facing behavior, and check regressions."
-    },
-    {
-      num: "06",
-      title: "Review & Deploy",
-      summary: "Manually review generated code, verify correctness, and finalize deployment."
+      title: "Validate",
+      summary: "Manually review code correctness, verify security, and confirm end-user behavior."
     }
   ],
   tools: [
     {
       name: "Antigravity",
-      role: "Primary AI-assisted development environment & workflow orchestrator"
+      role: "AI-assisted development environment & workflow orchestrator"
     },
     {
       name: "Claude",
-      role: "Architecture planning, code reviews, and structured problem solving"
+      role: "Architecture exploration, code review, and structured problem solving"
     },
     {
       name: "DeepSeek",
-      role: "Alternative reasoning, logic verification, and debugging assistance"
+      role: "Logic verification, debugging assistance, and syntax reference"
     },
     {
       name: "AI Agents & MCP",
-      role: "Tool integration, context retrieval, and repetitive workflow automation"
+      role: "Tool integration, repository context retrieval, and workflow automation"
     }
   ]
 };
@@ -282,52 +272,38 @@ export const careerTimeline = [
 
 export const skillGroups = [
   {
-    category: "Cloud Infrastructure",
+    category: "Cloud Platforms",
     items: [
-      { name: "AWS", context: "EC2, S3, IAM, VPC, CloudWatch, SNS, CloudFormation" },
-      { name: "Azure", context: "Fundamentals, Landing Zone research, Budgeting PoCs" }
+      { name: "AWS", context: "EC2, S3, IAM, VPC, CloudWatch, CloudFront, SNS, CloudFormation" },
+      { name: "Azure", context: "Landing Zones Fundamentals, Cloud Governance, Budget Alerts" }
     ]
   },
   {
-    category: "Development",
+    category: "Networking",
     items: [
-      { name: "JavaScript & React", context: "Component UI development & state handling" },
-      { name: "HTML5 & CSS3 / Tailwind", context: "Responsive layouts & typography" },
-      { name: "Python", context: "Basic scripting, OOP & data structures" },
-      { name: "SQL", context: "DDL, DML & query foundations" }
+      { name: "TCP/IP & Protocols", context: "HTTP/HTTPS, DNS, DHCP, Subnetting" },
+      { name: "Troubleshooting", context: "Network connectivity debugging & port inspection" }
     ]
   },
   {
-    category: "Cloud / DevOps Tools",
+    category: "Infrastructure & DevOps",
     items: [
-      { name: "Git & GitHub", context: "Branch management, PRs & collaboration" },
-      { name: "AWS CloudFormation", context: "Infrastructure as Code templates" },
-      { name: "Terraform", context: "Basic syntax & provider configurations" },
-      { name: "GitHub Actions", context: "Basic automated CI/CD workflows" }
+      { name: "Infrastructure as Code", context: "AWS CloudFormation, Terraform (Basics)" },
+      { name: "Version Control & CI/CD", context: "Git, GitHub, GitHub Actions workflows" }
     ]
   },
   {
-    category: "Systems & Networking",
+    category: "Systems & Troubleshooting",
     items: [
-      { name: "Linux Administration", context: "Command line, user permissions & service management" },
-      { name: "Networking Concepts", context: "TCP/IP, DNS, DHCP, HTTP/HTTPS, Subnetting" },
-      { name: "Troubleshooting", context: "Log analysis & connectivity debugging" }
+      { name: "Operating Systems", context: "Linux CLI, Windows Fundamentals, Service Management" },
+      { name: "Analysis & Support", context: "Log Analysis, Technical Troubleshooting, Incident Management" }
     ]
   },
   {
-    category: "Quality & Testing",
+    category: "Development & QA",
     items: [
-      { name: "User Acceptance Testing (UAT)", context: "End-user scenario validation & regression" },
-      { name: "Issue Documentation", context: "Structured bug reporting with reproduction steps" },
-      { name: "HLD & LLD Documentation", context: "Technical specification drafting" }
-    ]
-  },
-  {
-    category: "AI-Assisted Development",
-    items: [
-      { name: "Antigravity IDE", context: "Primary agentic development workflow" },
-      { name: "Claude & DeepSeek", context: "Code review, planning & debugging" },
-      { name: "Model Context Protocol (MCP)", context: "Tool integration & context workflows" }
+      { name: "Development", context: "Python (Basic), JavaScript & React, HTML5 / CSS3" },
+      { name: "Quality & Testing", context: "User-End Testing (UAT), Issue Documentation & Validation" }
     ]
   }
 ];

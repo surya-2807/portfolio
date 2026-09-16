@@ -27,7 +27,7 @@ export default function Hero() {
             {/* Main headline */}
             <div className="space-y-3">
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1]">
-                Cloud Infrastructure. <span className="accent-gradient">Software Systems.</span> AI-Assisted Engineering.
+                Cloud. <span className="accent-gradient">Software.</span> AI-assisted development.
               </h1>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl font-light">
                 {personalInfo.shortBio}
@@ -161,14 +161,14 @@ export default function Hero() {
               <p className="text-[11px] text-slate-400">Governance policies, metric triggers & UAT validation</p>
             </div>
 
-            {/* Currently Mastering */}
+            {/* Currently Learning */}
             <div className="p-4 rounded-xl bg-black/30 border border-white/[0.05] space-y-1.5">
               <div className="flex items-center gap-1.5 text-[11px] font-mono text-blue-400 uppercase tracking-wider">
                 <Code2 className="w-3 h-3" />
-                <span>Currently Mastering</span>
+                <span>Currently Learning</span>
               </div>
               <p className="text-xs sm:text-sm font-medium text-slate-200 leading-snug">
-                Terraform Modular IaC & Multi-Tier AWS Architectures
+                Terraform fundamentals & deeper AWS architecture concepts
               </p>
               <p className="text-[11px] text-slate-400">Automating reproducible VPC, S3 and IAM deployments</p>
             </div>
