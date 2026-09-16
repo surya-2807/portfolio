@@ -104,24 +104,30 @@ export const featuredProjects = [
     architectureNodes: [
       {
         id: "user",
-        label: "End User",
+        label: "End User (HTTPS)",
         type: "Client",
-        detail: "Client browser sends secure HTTPS request to the global edge network."
+        detail: "Client browser sends secure TLS/HTTPS request over modern HTTP/2 protocol."
+      },
+      {
+        id: "route53",
+        label: "Amazon Route 53",
+        type: "DNS",
+        detail: "Global DNS service routing client requests to the nearest CloudFront edge location."
       },
       {
         id: "cloudfront",
-        label: "CloudFront CDN",
+        label: "CloudFront CDN (OAC)",
         type: "Distribution",
-        detail: "Amazon CloudFront edge cache serves cached content or forwards request to S3 with Origin Access Control (OAC)."
+        detail: "Edge caching network with Origin Access Control (OAC) and custom SSL certificate."
       },
       {
         id: "s3",
-        label: "S3 Bucket",
+        label: "Amazon S3 Bucket",
         type: "Origin Storage",
-        detail: "Amazon S3 private storage bucket containing production HTML, CSS, JavaScript, and asset files."
+        detail: "Private S3 storage bucket hosting versioned HTML, CSS, JavaScript, and static assets."
       }
     ],
-    architectureString: "User ──> CloudFront CDN ──> S3 Bucket",
+    architectureString: "User ──> Route 53 ──> CloudFront CDN ──> S3 Bucket",
     techStack: ["AWS S3", "Amazon CloudFront", "CloudFormation", "Route 53"],
     githubUrl: "https://github.com/surya-2807/portfolio",
     liveUrl: "https://surya-2807.github.io/portfolio/",

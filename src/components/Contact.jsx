@@ -12,105 +12,105 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-4 sm:px-6">
-      <div className="max-w-4xl mx-auto space-y-10">
+    <section id="contact" className="py-16 md:py-24 px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto space-y-10 sm:space-y-12">
 
         {/* Section header */}
-        <div className="space-y-3 border-b border-white/[0.07] pb-5">
+        <div className="space-y-2.5 border-b border-white/[0.08] pb-5">
           <div className="text-[11px] font-mono uppercase tracking-widest text-slate-500">
-            08 / Get in Touch
+            08 / Contact & Collaboration
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
             Have a problem worth solving?
           </h2>
-          <p className="text-sm sm:text-base text-slate-400 max-w-2xl leading-relaxed font-light">
+          <p className="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed font-light">
             I'm open to software engineering roles, cloud opportunities, and technical collaborations.
-            Feel free to reach out directly — I respond quickly.
+            Feel free to reach out directly — I respond promptly.
           </p>
         </div>
 
         {/* Contact card */}
-        <div className="card-top-glow p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-[#0d1528] to-[#060d1c] border border-white/[0.07] shadow-card space-y-8">
+        <div className="card-top-glow p-6 sm:p-10 rounded-2xl bg-gradient-to-br from-[#0c152a]/95 via-[#071020]/95 to-[#040813]/95 border border-white/[0.08] shadow-[0_12px_40px_-10px_rgba(0,0,0,0.7)] space-y-8">
 
           {/* Primary CTAs */}
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3.5">
             <a
               href={`mailto:${personalInfo.email}`}
-              className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-[#4f8ef7] hover:bg-[#6aa1f8] text-white text-sm font-semibold transition-all duration-200 shadow-glow-sm hover:shadow-glow-blue hover:-translate-y-px"
+              className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white text-sm font-semibold transition-all duration-200 shadow-[0_0_25px_-5px_rgba(56,189,248,0.4)] hover:shadow-[0_0_30px_-2px_rgba(56,189,248,0.6)] hover:-translate-y-0.5"
             >
               <Mail className="w-4 h-4" />
               <span>Send an Email</span>
-              <ArrowRight className="w-3.5 h-3.5 opacity-70" />
+              <ArrowRight className="w-3.5 h-3.5 opacity-80" />
             </a>
 
             <button
               onClick={copyEmail}
-              className="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl bg-white/[0.05] hover:bg-white/[0.09] text-slate-200 border border-white/[0.09] text-sm font-medium transition-all duration-200 hover:-translate-y-px"
+              className="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-slate-200 border border-white/[0.08] text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan-500/30"
             >
               {copied ? (
                 <>
                   <Check className="w-4 h-4 text-emerald-400" />
-                  <span className="text-emerald-300 font-mono">Copied!</span>
+                  <span className="text-emerald-300 font-mono text-xs">Copied to Clipboard!</span>
                 </>
               ) : (
                 <>
-                  <Copy className="w-4 h-4 text-slate-400" />
-                  <span>Copy Email</span>
+                  <Copy className="w-4 h-4 text-cyan-400" />
+                  <span>Copy Email Address</span>
                 </>
               )}
             </button>
           </div>
 
           {/* Contact details */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 border-t border-white/[0.05]">
-            <div className="p-4 rounded-xl bg-black/20 border border-white/[0.05] space-y-1.5">
-              <div className="text-[10px] font-mono uppercase text-slate-600 tracking-wider">Email</div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-white/[0.06]">
+            <div className="p-4 rounded-xl bg-black/30 border border-white/[0.05] space-y-1">
+              <div className="text-[11px] font-mono uppercase text-cyan-400 font-semibold tracking-wider">Email Address</div>
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="text-xs font-semibold text-slate-200 hover:text-[#4f8ef7] break-all transition-colors"
+                className="text-xs sm:text-sm font-semibold text-slate-200 hover:text-cyan-300 break-all transition-colors"
               >
                 {personalInfo.email}
               </a>
             </div>
 
-            <div className="p-4 rounded-xl bg-black/20 border border-white/[0.05] space-y-1.5">
-              <div className="text-[10px] font-mono uppercase text-slate-600 tracking-wider">Phone / WhatsApp</div>
+            <div className="p-4 rounded-xl bg-black/30 border border-white/[0.05] space-y-1">
+              <div className="text-[11px] font-mono uppercase text-cyan-400 font-semibold tracking-wider">Phone / WhatsApp</div>
               <a
                 href={`tel:${personalInfo.phone}`}
-                className="text-xs font-semibold text-slate-200 hover:text-[#4f8ef7] transition-colors"
+                className="text-xs sm:text-sm font-semibold text-slate-200 hover:text-cyan-300 transition-colors"
               >
                 {personalInfo.phone}
               </a>
             </div>
 
-            <div className="p-4 rounded-xl bg-black/20 border border-white/[0.05] space-y-1.5">
-              <div className="text-[10px] font-mono uppercase text-slate-600 tracking-wider">Location</div>
-              <div className="text-xs font-semibold text-slate-200">{personalInfo.location}</div>
+            <div className="p-4 rounded-xl bg-black/30 border border-white/[0.05] space-y-1">
+              <div className="text-[11px] font-mono uppercase text-cyan-400 font-semibold tracking-wider">Location</div>
+              <div className="text-xs sm:text-sm font-semibold text-slate-200">{personalInfo.location}</div>
             </div>
           </div>
 
           {/* Social links */}
-          <div className="flex items-center gap-5 pt-2 border-t border-white/[0.05] text-xs">
+          <div className="flex flex-wrap items-center gap-6 pt-3 border-t border-white/[0.06] text-xs sm:text-sm">
             <a
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white transition-colors group"
+              className="inline-flex items-center gap-2 text-slate-300 hover:text-cyan-400 transition-colors group"
             >
-              <Linkedin className="w-4 h-4" />
+              <Linkedin className="w-4 h-4 text-cyan-400" />
               <span>LinkedIn Profile</span>
-              <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-70 transition-opacity" />
+              <ExternalLink className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
             </a>
             <span className="text-slate-700">·</span>
             <a
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white transition-colors group"
+              className="inline-flex items-center gap-2 text-slate-300 hover:text-cyan-400 transition-colors group"
             >
-              <Github className="w-4 h-4" />
+              <Github className="w-4 h-4 text-cyan-400" />
               <span>GitHub Profile</span>
-              <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-70 transition-opacity" />
+              <ExternalLink className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
             </a>
           </div>
 
