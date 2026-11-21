@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { featuredProjects, earlierEngineeringProjects } from '../data/portfolioData';
-import { ExternalLink, Github, ArrowRight, Eye, Server, Activity, Bell, Mail, Globe, Shield, HardDrive, Layers, Radio, Network } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight, Eye, Server, Activity, Bell, Mail, Globe, Shield, HardDrive, Layers, Radio, Network, Layout } from 'lucide-react';
 
 const NODE_CONFIG = {
   Compute:        { border: 'border-amber-500/30 hover:border-amber-400/60', bg: 'bg-amber-500/10', text: 'text-amber-400', icon: <Server className="w-4 h-4 text-amber-400" /> },
@@ -11,6 +11,8 @@ const NODE_CONFIG = {
   DNS:            { border: 'border-blue-500/30 hover:border-blue-400/60',   bg: 'bg-blue-500/10',   text: 'text-blue-400',  icon: <Network className="w-4 h-4 text-blue-400" /> },
   Distribution:   { border: 'border-indigo-500/30 hover:border-indigo-400/60', bg: 'bg-indigo-500/10', text: 'text-indigo-400', icon: <Shield className="w-4 h-4 text-indigo-400" /> },
   'Origin Storage': { border: 'border-teal-500/30 hover:border-teal-400/60', bg: 'bg-teal-500/10',  text: 'text-teal-400',  icon: <HardDrive className="w-4 h-4 text-teal-400" /> },
+  Frontend:       { border: 'border-cyan-500/30 hover:border-cyan-400/60',   bg: 'bg-cyan-500/10',   text: 'text-cyan-400',  icon: <Layout className="w-4 h-4 text-cyan-400" /> },
+  Gallery:        { border: 'border-violet-500/30 hover:border-violet-400/60', bg: 'bg-violet-500/10', text: 'text-violet-400', icon: <Layers className="w-4 h-4 text-violet-400" /> },
 };
 
 export default function Projects({ onOpenModal }) {

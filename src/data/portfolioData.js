@@ -54,6 +54,49 @@ export const currentFocus = {
 
 export const featuredProjects = [
   {
+    id: "airbnb-clone",
+    title: "Airbnb Listing UI Clone",
+    subtitle: "High-fidelity listing interface with accessible photo-tour & interactive reservation flows",
+    category: "React & AI Development",
+    summary: "Engineered a responsive Airbnb listing interface in React, TypeScript, and Tailwind CSS, featuring accessible photo tour lightbox interactions, structured host/amenity specifications, and dynamic reservation pricing.",
+    architectureNodes: [
+      {
+        id: "header",
+        label: "Listing Header & Meta",
+        type: "Frontend",
+        detail: "Responsive header with listing metadata, reviews rating, location breadcrumbs, and share/save triggers."
+      },
+      {
+        id: "gallery",
+        label: "Photo Grid & Lightbox",
+        type: "Gallery",
+        detail: "Interactive showcase grid with hover zoom depth and full-screen accessible photo-tour modal."
+      },
+      {
+        id: "specs",
+        label: "Host & Amenity Specs",
+        type: "Distribution",
+        detail: "Structured specification cards, sleeping arrangements, house rules, and verified host highlights."
+      },
+      {
+        id: "booking",
+        label: "Reservation Widget",
+        type: "Compute",
+        detail: "Sticky reservation card calculating dynamic night totals, cleaning fees, and service charges."
+      }
+    ],
+    architectureString: "Listing Header ──> Photo Tour Lightbox ──> Amenity Specs ──> Sticky Booking",
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Vite", "AI Coding Tools", "Vercel"],
+    githubUrl: "https://github.com/surya-2807/airbnb",
+    liveUrl: "https://airbnb-green-five.vercel.app/",
+    keyPoints: [
+      "Engineered an interactive 5-image showcase grid with full-screen accessible lightbox tour navigation.",
+      "Developed a sticky booking reservation card with dynamic date selection and live cost breakdown.",
+      "Accelerated UI scaffolding and accessibility patterns using AI-assisted coding workflows.",
+      "Configured continuous deployment pipeline on Vercel with responsive desktop and mobile viewports."
+    ]
+  },
+  {
     id: "aws-monitoring",
     title: "Personal AWS Lab — Cloud Monitoring & Alerting",
     subtitle: "Hands-on exploration of automated EC2 health monitoring and SNS incident notifications",
