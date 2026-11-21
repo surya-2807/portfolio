@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Currently from './components/Currently';
@@ -24,13 +24,13 @@ export default function App() {
   // Fire analytics ping once on load
   useEffect(() => { trackVisit(); }, []);
 
-  const handleOpenModal = (type, data, title = '', subtitle = '') => {
+  const handleOpenModal = useCallback((type, data, title = '', subtitle = '') => {
     setModalState({ isOpen: true, type, data, title, subtitle });
-  };
+  }, []);
 
-  const handleCloseModal = () => {
+  const handleCloseModal = useCallback(() => {
     setModalState(prev => ({ ...prev, isOpen: false }));
-  };
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#05080f] text-slate-100 selection:bg-blue-600/25 selection:text-blue-200">

@@ -9,7 +9,7 @@ export const personalInfo = {
   phone: "+91 9600834966",
   github: "https://github.com/surya-2807",
   linkedin: "https://www.linkedin.com/in/surya-prakash-s-p",
-  resumeUrl: `${BASE}assets/SURYA_PRAKASH.pdf`,
+  resumeUrl: `${BASE}assets/Surya_Prakash_.pdf`,
   profileImage: `${BASE}assets/surya_profile.jpg`,
   headline: "Cloud. Software. AI-assisted development.",
   shortBio: "Associate System Engineer Intern at Devopstrio. I work on cloud governance research, web features, UAT testing, and AI-assisted engineering workflows with a focus on writing clean, dependable systems."
@@ -133,7 +133,50 @@ export const featuredProjects = [
     ]
   },
   {
-    id: "Devopstrio-web",
+    id: "airbnb-clone",
+    title: "Airbnb Listing UI Clone",
+    subtitle: "High-fidelity listing page with accessible photo tour and interactive reservation flow",
+    category: "React & AI-Assisted Development",
+    summary: "Built a responsive Airbnb-style listing page in React, TypeScript and Tailwind CSS, with an accessible photo-tour lightbox, structured host and amenity details, and a reservation card that calculates the price breakdown live.",
+    architectureNodes: [
+      {
+        id: "header",
+        label: "Listing Header",
+        type: "Interface",
+        detail: "Responsive header with listing title, rating, location and share / save actions."
+      },
+      {
+        id: "gallery",
+        label: "Photo Grid & Lightbox",
+        type: "Media",
+        detail: "5-image showcase grid with hover zoom and a full-screen photo-tour modal that supports keyboard navigation."
+      },
+      {
+        id: "specs",
+        label: "Host & Amenity Specs",
+        type: "Content",
+        detail: "Structured cards for amenities, sleeping arrangements, house rules and host highlights."
+      },
+      {
+        id: "booking",
+        label: "Reservation Widget",
+        type: "Interaction",
+        detail: "Sticky booking card that updates night totals, cleaning fee and service charges as dates change."
+      }
+    ],
+    architectureString: "Header ──> Photo Lightbox ──> Amenity Specs ──> Sticky Booking",
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Vite", "AI-Assisted Coding", "Vercel"],
+    githubUrl: "https://github.com/surya-2807/airbnb",
+    liveUrl: "https://airbnb-green-five.vercel.app/",
+    keyPoints: [
+      "Built a 5-image showcase grid with a full-screen, accessible lightbox tour.",
+      "Developed a sticky reservation card with date selection and a live cost breakdown.",
+      "Used AI-assisted coding to speed up UI scaffolding, then reviewed and tested the output manually.",
+      "Deployed on Vercel with automatic builds from GitHub; checked on desktop and mobile viewports."
+    ]
+  },
+  {
+    id: "devopstrio-web",
     title: "Product Web Development & QA",
     subtitle: "Webpage development, bug fixing, and UAT validation during Devopstrio internship",
     category: "Software Engineering",
