@@ -3,11 +3,12 @@ import { skillGroups } from '../data/portfolioData';
 
 // Domain → accent color mapping
 const DOMAIN_COLORS = {
-  'Cloud Platforms':            { header: 'text-[#4f8ef7]', bar: 'bg-[#4f8ef7]/15 border-[#4f8ef7]/20', dot: 'bg-[#4f8ef7]' },
-  'Networking':                 { header: 'text-indigo-400', bar: 'bg-indigo-500/10 border-indigo-500/20', dot: 'bg-indigo-400' },
-  'Infrastructure & DevOps':    { header: 'text-cyan-400',   bar: 'bg-cyan-500/10 border-cyan-500/20',   dot: 'bg-cyan-400' },
-  'Systems & Troubleshooting':  { header: 'text-slate-300',  bar: 'bg-slate-500/10 border-slate-500/20', dot: 'bg-slate-400' },
-  'Development & QA':           { header: 'text-amber-400',  bar: 'bg-amber-500/10 border-amber-500/20', dot: 'bg-amber-400' },
+  'Cloud Infrastructure':      { header: 'text-[#4f8ef7]', bar: 'bg-[#4f8ef7]/15 border-[#4f8ef7]/20', dot: 'bg-[#4f8ef7]' },
+  'Development':               { header: 'text-indigo-400', bar: 'bg-indigo-500/10 border-indigo-500/20', dot: 'bg-indigo-400' },
+  'Cloud / DevOps Tools':      { header: 'text-cyan-400',   bar: 'bg-cyan-500/10 border-cyan-500/20',   dot: 'bg-cyan-400' },
+  'Systems & Networking':      { header: 'text-slate-300',  bar: 'bg-slate-500/10 border-slate-500/20', dot: 'bg-slate-400' },
+  'Quality & Testing':         { header: 'text-amber-400',  bar: 'bg-amber-500/10 border-amber-500/20', dot: 'bg-amber-400' },
+  'AI-Assisted Development':   { header: 'text-violet-400', bar: 'bg-violet-500/10 border-violet-500/20',dot: 'bg-violet-400' },
 };
 
 export default function Skills() {
@@ -24,14 +25,14 @@ export default function Skills() {
             Skills & Practical Competencies
           </h2>
           <p className="text-sm text-slate-400 max-w-2xl leading-relaxed font-light">
-            Organized by functional domains with real-world application context from active project work and internship responsibilities.
+            Organized by functional domain with real-world application context from active project work and internship responsibilities.
           </p>
         </div>
 
         {/* Domain grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {skillGroups.map((group, index) => {
-            const colors = DOMAIN_COLORS[group.category] || DOMAIN_COLORS['Cloud Platforms'];
+            const colors = DOMAIN_COLORS[group.category] || DOMAIN_COLORS['Development'];
             return (
               <div
                 key={index}

@@ -29,8 +29,8 @@ export default function AIWorkflow() {
           </p>
         </div>
 
-        {/* Pipeline grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* 6-step pipeline */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {aiWorkflow.steps.map((step, index) => {
             const isHovered = activeStep === step.num;
             return (
@@ -63,7 +63,7 @@ export default function AIWorkflow() {
                 </p>
 
                 {/* Connecting arrow — right side decoration */}
-                {index < aiWorkflow.steps.length - 1 && (
+                {index % 3 !== 2 && (
                   <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-px bg-gradient-to-r from-white/[0.1] to-transparent hidden lg:block" />
                 )}
               </div>

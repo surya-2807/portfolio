@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { featuredProjects, earlierEngineeringProjects } from '../data/portfolioData';
-import { ExternalLink, Github, ArrowRight, Eye, Server, Activity, Bell, Mail, Globe, Shield, HardDrive, Layout, Layers, Network } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight, Eye, Server, Activity, Bell, Mail, Globe, Shield, HardDrive } from 'lucide-react';
 
 const NODE_COLORS = {
   Compute:        { border: 'border-blue-500/35',   bg: 'bg-blue-500/8',   icon: <Server   className="w-4 h-4 text-blue-400" /> },
@@ -8,11 +8,8 @@ const NODE_COLORS = {
   'Pub/Sub':      { border: 'border-rose-500/35',   bg: 'bg-rose-500/8',   icon: <Bell     className="w-4 h-4 text-rose-400" /> },
   Notification:   { border: 'border-emerald-500/35',bg: 'bg-emerald-500/8',icon: <Mail     className="w-4 h-4 text-emerald-400" /> },
   Client:         { border: 'border-cyan-500/35',   bg: 'bg-cyan-500/8',   icon: <Globe    className="w-4 h-4 text-cyan-400" /> },
-  DNS:            { border: 'border-sky-500/35',    bg: 'bg-sky-500/8',    icon: <Network  className="w-4 h-4 text-sky-400" /> },
   Distribution:   { border: 'border-indigo-500/35', bg: 'bg-indigo-500/8', icon: <Shield   className="w-4 h-4 text-indigo-400" /> },
   'Origin Storage':{ border: 'border-teal-500/35',  bg: 'bg-teal-500/8',   icon: <HardDrive className="w-4 h-4 text-teal-400" /> },
-  Frontend:       { border: 'border-cyan-500/35',   bg: 'bg-cyan-500/8',   icon: <Layout    className="w-4 h-4 text-cyan-400" /> },
-  Gallery:        { border: 'border-violet-500/35', bg: 'bg-violet-500/8', icon: <Layers    className="w-4 h-4 text-violet-400" /> },
 };
 
 export default function Projects({ onOpenModal }) {
@@ -91,7 +88,7 @@ export default function Projects({ onOpenModal }) {
               {project.architectureNodes && (
                 <div className="p-4 sm:p-5 rounded-xl bg-black/30 border border-white/[0.05] space-y-3">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between text-[11px] font-mono text-slate-500 gap-2">
-                    <span className="uppercase">Architecture · Tap / Hover nodes for detail</span>
+                    <span className="uppercase">Architecture · Hover nodes for detail</span>
                     <span className="text-[#4f8ef7] font-semibold">{project.architectureString}</span>
                   </div>
 

@@ -4,7 +4,7 @@ import { ArrowDown, FileText, Github, Linkedin, ShieldCheck, Cloud, Award } from
 
 export default function Hero() {
   return (
-    <section id="hero" className="pt-28 pb-16 md:pt-36 md:pb-24 px-4 sm:px-6">
+    <section id="hero" className="pt-28 pb-20 md:pt-36 md:pb-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col-reverse lg:flex-row items-start justify-between gap-12 lg:gap-16">
 
